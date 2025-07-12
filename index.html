@@ -8,16 +8,238 @@
   <title>Responsive</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/base.css">
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    div {
+    margin: 0 auto;
+    }
+
+    .flex-box1 {
+      display: flex;
+    }
+    .float-box {
+      margin: 0 auto;
+      width: 600px;
+    }
+    .flex-box2 {
+      display: flex;
+      width: 900px;
+    }
+    .flex-box3 {
+      display: grid;
+      width: 900px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .flex-box4 {
+      display: flex;
+      width: 600px;
+    }
+    
+    .box1 {
+      background-color: #ff0000;
+      width: 400px;
+      height: 400px;
+    }
+
+    .box2 {
+      background-color: #ff0000;
+      width: 300px;
+      height: 300px;
+    }
+
+    .box3 {
+      background-color: #0008ff;
+      width: 300px;
+      height: 300px;
+      margin-right: 150px;
+    }
+
+    .box4 {
+      background-color: #22ff00;
+      width: 300px;
+      height: 300px;
+    }
+
+    .box5 {
+      background-color: #ff0000;
+      width: 300px;
+      height: 300px;
+      float: inline-start;
+    }
+
+    .box6 {
+      background-color: #0008ff;
+      width: 300px;
+      height: 300px;
+      float: inline-start;
+      margin-bottom: 40px;
+    }
+
+    .box7 {
+      background-color: #ff0000;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    .box8 {
+      background-color: #0008ff;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    .box9 {
+      background-color: #ff8400;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+  }
+
+    .box10 {
+      background-color: #00ff51;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      order: 1;
+    }
+
+    .box11 {
+      background-color: #b4ff00;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      order: 2;
+    }
+
+    .box12 {
+      background-color: #ff00e1;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      order: 3;
+  }
+
+      .box13 {
+      background-color: #ff0000;
+      width: 300px;
+      height: 300px;
+    }
+
+    .box14 {
+      background-color: #00ff51;
+      width: 300px;
+      height: 300px;
+    }
+
+    .box15 {
+      background-color: #0008ff;
+      width: 300px;
+      height: 300px;
+      display: none;
+  }
+
+  @media screen and (max-width:960px) {
+    .box1 {
+    width: 200px;
+    height: 200px;
+    }
+
+    .box2 {
+    background-color: #007bff;
+    }
+  
+    .box3 {
+    margin-right: 50px;
+    }
+
+    .box5 {
+      float: none;
+    }
+
+    .box6 {
+      float: none;
+      margin-bottom: 0;
+    }
+
+    .flex-box2 {
+      flex-direction: row-reverse;
+    }
+
+    .box10 {
+      order: 2;
+    }
+
+    .box11 {
+      order: 3;
+    }
+
+    .box12 {
+      order: 1;
+    }
+
+    .box15 {
+      position: absolute;
+      display: block;
+    }
+  }
+  </style>
 </head>
 
 <body>
   <h2 class="question--title">Q7 サイズ変更</h2>
+  <div class="box1"></div>
+
   <h2 class="question--title">Q2 色変更</h2>
+  <div class="box2"></div>
+
   <h2 class="question--title">Q3 margin値の変更</h2>
+  <div class="flex-box1">
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </div>
+
   <h2 class="question--title">Q4 floatの解除</h2>
-  <h2 class="question--title">Q5 flexboxの入れ替え(逆順)</h2>
+  <div class="float-box">
+    <div class="box5"></div>
+    <div class="box6"></div>
+  </div>
+
+  <h2 class="question--title" style="clear: both;">Q5 flexboxの入れ替え(逆順)</h2>
+  <div class="flex-box2">
+    <div class="box7">A</div>
+    <div class="box8">B</div>
+    <div class="box9">C</div>
+    </div>
+
   <h2 class="question--title">Q6 flexboxの入れ替え(指定)</h2>
+  <div class="flex-box3">
+    <div class="box10">A</div>
+    <div class="box11">B</div>
+    <div class="box12">C</div>
+  </div> 
+
   <h2 class="question--title">Q7 要素の表示・非表示</h2>
+  <div class="flex-box4">
+    <div class="box13"></div>
+    <div class="box14"></div>
+    <div class="box15"></div>
+  </div>
 </body>
 
 </html>
